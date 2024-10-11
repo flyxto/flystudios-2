@@ -1,0 +1,106 @@
+---
+// VideoGallery.astro
+---
+
+<div class="container mx-auto p-4">
+  <h1 class="text-2xl font-bold mb-4">Video Gallery</h1>
+  
+  <div class="flex flex-wrap gap-2 mb-4" id="category-filters">
+    <button class="px-4 py-2 rounded-md bg-blue-500 text-white" data-category="All">All</button>
+    <button class="px-4 py-2 rounded-md bg-gray-200" data-category="Music">Music</button>
+    <button class="px-4 py-2 rounded-md bg-gray-200" data-category="Science">Science</button>
+    <button class="px-4 py-2 rounded-md bg-gray-200" data-category="Technology">Technology</button>
+    <button class="px-4 py-2 rounded-md bg-gray-200" data-category="Entertainment">Entertainment</button>
+  </div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" id="video-grid">
+    <!-- Video thumbnails will be dynamically inserted here -->
+  </div>
+
+  <div id="video-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center">
+    <div class="bg-white p-4 rounded-lg max-w-3xl w-full">
+      <div class="flex justify-between items-center mb-4">
+        <h2 id="modal-title" class="text-xl font-bold"></h2>
+        <button id="close-modal" class="text-2xl">&times;</button>
+      </div>
+      <div class="aspect-video">
+        <iframe id="video-iframe" width="100%" height="100%" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function initVideoGallery() {
+    const videos = [
+      { id: 'dQw4w9WgXcQ', title: 'Video 1', category: 'Music', thumbnail: 'https://img.youtube.com/vi/dQw4w9WgXcQ/0.jpg' },
+      { id: 'uD4izuDMUQA', title: 'Video 2', category: 'Science', thumbnail: 'https://img.youtube.com/vi/uD4izuDMUQA/0.jpg' },
+      { id: '1Q8fG0TtVAY', title: 'Video 3', category: 'Technology', thumbnail: 'https://img.youtube.com/vi/1Q8fG0TtVAY/0.jpg' },
+      { id: 'jNQXAC9IVRw', title: 'Video 4', category: 'Entertainment', thumbnail: 'https://img.youtube.com/vi/jNQXAC9IVRw/0.jpg' },
+      { id: 'kJQP7kiw5Fk', title: 'Video 5', category: 'Music', thumbnail: 'https://img.youtube.com/vi/kJQP7kiw5Fk/0.jpg' },
+      { id: 'fJ9rUzIMcZQ', title: 'Video 6', category: 'Entertainment', thumbnail: 'https://img.youtube.com/vi/fJ9rUzIMcZQ/0.jpg' },
+      { id: 'YR5ApYxkU-U', title: 'Video 7', category: 'Science', thumbnail: 'https://img.youtube.com/vi/YR5ApYxkU-U/0.jpg' },
+      { id: 'Gs069dndIYk', title: 'Video 8', category: 'Technology', thumbnail: 'https://img.youtube.com/vi/Gs069dndIYk/0.jpg' },
+    ];
+
+    const videoGrid = document.getElementById('video-grid');
+    const categoryFilters = document.getElementById('category-filters');
+    const videoModal = document.getElementById('video-modal');
+    const modalTitle = document.getElementById('modal-title');
+    const videoIframe = document.getElementById('video-iframe');
+    const closeModal = document.getElementById('close-modal');
+
+    function renderVideos(filteredVideos) {
+      videoGrid.innerHTML = '';
+      filteredVideos.forEach(video => {
+        const videoElement = document.createElement('div');
+        videoElement.className = 'cursor-pointer';
+        videoElement.innerHTML = `
+          <img src="${video.thumbnail}" alt="${video.title}" class="w-full rounded-lg hover:opacity-75 transition-opacity">
+          <p class="mt-2 text-sm font-medium">${video.title}</p>
+        `;
+        videoElement.addEventListener('click', () => openVideoModal(video));
+        videoGrid.appendChild(videoElement);
+      });
+    }
+
+    function openVideoModal(video) {
+      modalTitle.textContent = video.title;
+      videoIframe.src = `https://www.youtube.com/embed/${video.id}?autoplay=1`;
+      videoModal.classList.remove('hidden');
+    }
+
+    categoryFilters.addEventListener('click', (event) => {
+      if (event.target.tagName === 'BUTTON') {
+        const category = event.target.dataset.category;
+        categoryFilters.querySelectorAll('button').forEach(btn => {
+          btn.classList.remove('bg-blue-500', 'text-white');
+          btn.classList.add('bg-gray-200');
+        });
+        event.target.classList.remove('bg-gray-200');
+        event.target.classList.add('bg-blue-500', 'text-white');
+        
+        const filteredVideos = category === 'All' ? videos : videos.filter(video => video.category === category);
+        renderVideos(filteredVideos);
+      }
+    });
+
+    closeModal.addEventListener('click', () => {
+      videoModal.classList.add('hidden');
+      videoIframe.src = '';
+    });
+
+    // Initial render
+    renderVideos(videos);
+  }
+
+  // Run the initialization function when the DOM is ready
+  document.addEventListener('DOMContentLoaded', initVideoGallery);
+
+  // Re-run the initialization when Astro swaps the page content
+  document.addEventListener('astro:page-load', initVideoGallery);
+</script>
+
+<style>
+  /* Add any additional styles here if needed */
+</style>
