@@ -1,0 +1,14 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import VideoGallery from "../../components/VideoGallery.astro";
+---
+
+<Layout title="Welcome to Astro - Planetario template.">
+  <div class="bg-gray-50 mt-20">
+    <main
+      class="mx-auto px-4 pb-24 pt-14 sm:px-6 sm:pb-32 sm:pt-16 lg:max-w-7xl lg:px-8"
+    >
+      <VideoGallery client:load />
+    </main>
+  </div>
+</Layout>
