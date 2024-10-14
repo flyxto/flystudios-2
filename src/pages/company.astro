@@ -1,0 +1,49 @@
+---
+import Layout from "../layouts/Layout.astro";
+import AboutUs from "../components/AboutUs.astro";
+import PartnershipsGridGallery from "../components/PartnershipsGridGallery.astro";
+
+const leadershipTeam = [
+  {
+    name: "Janindu Rajapaksha",
+    role: "Co-Founder & CEO",
+    image: "/company/janindu.jpg",
+  },
+  {
+    name: "Yasanth Dolamulla",
+    role: "Co-Founder & CGO",
+    image: "/company/janindu.jpg",
+  },
+  {
+    name: "Kaveesha Sandeepa",
+    role: "Cheif Creative Officer",
+    image: "/company/janindu.jpg",
+  },
+  {
+    name: "Sudara Wishwajith",
+    role: "Cheif Technology Officer",
+    image: "/company/janindu.jpg",
+  },
+  {
+    name: "Kisal Weerachandra",
+    role: "Chief Project Officer",
+    image: "/company/janindu.jpg",
+  },
+];
+---
+
+<Layout title="Company | FLY STUDIOS">
+  <main>
+    <AboutUs
+      companyName="FLY Studios"
+      foundedYear={2022}
+      mission="To transform ideas into captivating visual stories that inspire and engage audiences worldwide."
+      leadershipTeam={leadershipTeam}
+    />
+    <div class="mx-auto mt-32 max-w-7xl px-6 sm:mt-12 lg:px-8">
+      <!-- ... other sections ... -->
+
+      <PartnershipsGridGallery />
+    </div>
+  </main>
+</Layout>

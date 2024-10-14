@@ -8,30 +8,31 @@ const {} = Astro.props;
 ---
 
 <div class="">
-  <div
-    class="relative isolate overflow-hidden bg-gradient-to-b from-indigo-100/20"
-  >
-    <div class="mx-auto max-w-7xl mt-12 pt-40 pb-32">
+  <div class="relative isolate bg-[#FAFCFF] overflow-hidden">
+    <div class="mx-auto max-w-7xl mt-12 sm:pt-24 pt-24 pb-32">
       <p class="lg:block hidden text-8xl text-center text-blue-900">
         Your Creative<span class="text-blue-500"> Best Friend.</span>
       </p>
-      <p class="lg:text-8xl lg:hidden text-6xl text-center text-blue-900">
+      <p class="lg:text-8xl lg:hidden text-5xl text-center text-blue-900">
         Your Creative<br /><span class="text-5xl text-blue-500">
           Best Friend.</span
         >
       </p>
 
-      <div class="flex justify-center mt-16">
-        <video src="/action3.mp4" autoplay loop muted width="500px"></video>
+      <div class="flex justify-center mt-32">
+        <video class="sm:w-[500px] w-60" src="/action3.mp4" autoplay loop muted width="500px"></video>
+      </div>
+      <div class="sm:hidden block">
+        <AnimatedImages client:load />
       </div>
       <p
-        class="text-center mt-24 lg:text-2xl text-xl justify-center gap-2 flex lg:gap-5 text-blue-900"
+        class="text-center sm:mt-24 mt-40 lg:text-2xl text-lg justify-center gap-2 flex lg:gap-5 text-blue-900"
       >
         Think<span class="text-blue-500">•</span>Design<span
           class="text-blue-500">•</span
         >Produce<span class="text-blue-500">•</span>Animate
       </p>
-      <div class="lg:block hidden">
+      <div class="sm:block hidden">
         <AnimatedImages client:load />
       </div>
     </div>
@@ -147,38 +148,39 @@ const {} = Astro.props;
     >
     </div>
   </div> -->
+  </div>
+
+  <script type="module" client:load>
+    const images = [
+      "https://uploads-ssl.webflow.com/5ea7fd4e3d52ef73804bc877/640942c2de5aef189fead7de_Screenshot-min-3.png",
+      "https://uploads-ssl.webflow.com/5ea7fd4e3d52ef73804bc877/63f2acd1cdf34e09cfb7e39e_Screenshot-min-4.png",
+      "https://uploads-ssl.webflow.com/5ea7fd4e3d52ef73804bc877/63f1a16ac16726b1e653e8ca_Screenshot-min.png",
+      // Add more URLs as needed
+    ];
+    let currentIndex = 0;
+    const imageElement = document.getElementById("image");
+
+    // Initially, set the image opacity to 100 to ensure it is visible
+    imageElement.classList.remove("opacity-0");
+
+    function changeImage() {
+      // Add opacity class 0 to make the current image transparent
+      imageElement.classList.add("opacity-0");
+
+      setTimeout(() => {
+        currentIndex++;
+        if (currentIndex >= images.length) {
+          currentIndex = 0;
+        }
+        imageElement.src = images[currentIndex];
+        // Wait for the image to load before making it visible
+        imageElement.onload = () => {
+          imageElement.classList.remove("opacity-0"); // Make the new image visible
+        };
+      }, 1000); // This time should match the duration of the opacity transition
+    }
+
+    // Starts image transition every 4 seconds (includes 1 second for transition duration)
+    setInterval(changeImage, 4000);
+  </script>
 </div>
-
-<script type="module" client:load>
-  const images = [
-    "https://uploads-ssl.webflow.com/5ea7fd4e3d52ef73804bc877/640942c2de5aef189fead7de_Screenshot-min-3.png",
-    "https://uploads-ssl.webflow.com/5ea7fd4e3d52ef73804bc877/63f2acd1cdf34e09cfb7e39e_Screenshot-min-4.png",
-    "https://uploads-ssl.webflow.com/5ea7fd4e3d52ef73804bc877/63f1a16ac16726b1e653e8ca_Screenshot-min.png",
-    // Add more URLs as needed
-  ];
-  let currentIndex = 0;
-  const imageElement = document.getElementById("image");
-
-  // Initially, set the image opacity to 100 to ensure it is visible
-  imageElement.classList.remove("opacity-0");
-
-  function changeImage() {
-    // Add opacity class 0 to make the current image transparent
-    imageElement.classList.add("opacity-0");
-
-    setTimeout(() => {
-      currentIndex++;
-      if (currentIndex >= images.length) {
-        currentIndex = 0;
-      }
-      imageElement.src = images[currentIndex];
-      // Wait for the image to load before making it visible
-      imageElement.onload = () => {
-        imageElement.classList.remove("opacity-0"); // Make the new image visible
-      };
-    }, 1000); // This time should match the duration of the opacity transition
-  }
-
-  // Starts image transition every 4 seconds (includes 1 second for transition duration)
-  setInterval(changeImage, 4000);
-</script>

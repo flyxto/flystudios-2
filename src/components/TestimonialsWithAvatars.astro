@@ -1,0 +1,75 @@
+---
+// File: src/components/TestimonialsWithAvatars.astro
+
+interface Testimonial {
+  content: string;
+  author: string;
+  role: string;
+  company: string;
+  avatar: string;
+}
+
+const testimonials: Testimonial[] = [
+  {
+    content:
+      "Great Job FLY. Thank you for helping us. We want to work with you for all the projects in our business.",
+    author: "Chris Alkache",
+    role: "Project Engineer,",
+    company: "ALUSCALE – Qatar",
+    avatar: "/testimonials/chris.jpg",
+  },
+
+  {
+    content:
+      "Thank you so much for your amazing support. Looking forward to work with you in more contracts.",
+    author: "Chamikara Senarathna",
+    role: "",
+    company: "MetaX Global – China | Sri Lanka",
+    avatar: "/testimonials/chamikara.jpg",
+  },
+  {
+    content:
+      "Thank you very much for making this concept video exactly as we had in our minds.",
+    author: "Sameera Nandasiri",
+    role: "",
+    company: "Sri Craft Algama - Sri Lanka",
+    avatar: "/testimonials/sricraft.jpg",
+  },
+];
+---
+
+<section class="w-full py-12 md:py-24 lg:py-32 ">
+  <div class="container mx-auto px-4 md:px-6">
+    <h2
+      class="text-3xl font-bold tracking-tight text-center text-blue-500 sm:text-4xl mb-12"
+    >
+      What Our Clients Say
+    </h2>
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      {
+        testimonials.map((testimonial) => (
+          <div class="bg-white p-6 rounded-3xl shadow-md flex flex-col items-center text-center">
+            <img
+              src={testimonial.avatar}
+              alt={`Avatar of ${testimonial.author}`}
+              class="w-20 h-20 rounded-full mb-4 object-cover"
+              width="80"
+              height="80"
+            />
+            <blockquote class="mt-2">
+              <p class="text-gray-700 mb-4 italic">"{testimonial.content}"</p>
+              <footer class="text-sm">
+                <strong class="text-gray-900 font-bold block">
+                  {testimonial.author}
+                </strong>
+                <span class="text-gray-600">
+                  {testimonial.role} {testimonial.company}
+                </span>
+              </footer>
+            </blockquote>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

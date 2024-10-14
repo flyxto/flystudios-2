@@ -1,0 +1,163 @@
+---
+interface TeamMember {
+  name: string;
+  role: string;
+  image: string;
+}
+
+interface Props {
+  companyName: string;
+  foundedYear: number;
+  mission: string;
+  leadershipTeam?: TeamMember[];
+}
+
+const { companyName, foundedYear, mission, leadershipTeam = [] } = Astro.props;
+---
+
+<div class="mx-auto pt-32 max-w-7xl px-6 sm:pt-32 lg:px-8">
+  <div class="mx-auto lg:text-center">
+    <h2
+      class="text-3xl font-bold tracking-tight text-center text-blue-500 sm:text-4xl"
+    >
+      Our Story and Vision
+    </h2>
+    <p class="mt-6 text-lg leading-8 font-nunito text-gray-600">
+      Discover the passion and expertise behind {companyName}. We're committed
+      to delivering excellence and innovation in every project we undertake.
+    </p>
+  </div>
+  <div class="mx-auto max-w-7xl mt-12 sm:px-6 lg:px-8">
+    <div
+      class="relative overflow-hidden bg-gray-200 px-6 py-12 shadow-xl rounded-3xl sm:px-10 sm:py-24 md:px-12 lg:px-20"
+    >
+      <img
+        class="absolute inset-0 h-full w-full object-cover"
+        src="/company/aboutHead5.jpg"
+        alt=""
+      />
+      <div class="absolute inset-0 bg-black bg-opacity-50 mix-blend-multiply"></div>
+      <div class="relative mx-auto max-w-2xl lg:mx-0">
+        <figure>
+          <blockquote
+            class="mt-6 text-lg py-12 font-semibold text-white sm:text-xl sm:leading-8"
+          >
+            <p>
+              FLY Studios LK is a premier creative production house in Sri
+              Lanka, specializing in stunning VFX, animations, strategic video
+              productions, and expert editing. We bring ideas to life with
+              captivating visuals, delivering innovative and impactful content
+              that resonates with audiences.
+            </p>
+          </blockquote>
+          <!-- <figcaption class="mt-6 text-base text-white">
+            <div class="font-semibold">Judith Black</div>
+            <div class="mt-1">CEO of Template</div>
+          </figcaption> -->
+        </figure>
+      </div>
+    </div>
+  </div>
+  <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
+    <dl
+      class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16"
+    >
+      <div class="relative pl-16">
+        <dt class="text-base font-semibold leading-7 text-gray-900">
+          <div
+            class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-blue-500"
+          >
+            <svg
+              class="h-6 w-6 text-white"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"
+              ></path>
+            </svg>
+          </div>
+          Our Mission
+        </dt>
+        <dd class="mt-2 text-base leading-7 text-gray-600">
+          {mission}
+        </dd>
+      </div>
+      <div class="relative pl-16">
+        <dt class="text-base font-semibold leading-7 text-gray-900">
+          <div
+            class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-blue-500"
+          >
+            <svg
+              class="h-6 w-6 text-white"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 3v17.25m0 0c-1.472 0-2.882.265-4.185.75M12 20.25c1.472 0 2.882.265 4.185.75M18.75 4.97A48.416 48.416 0 0012 4.5c-2.291 0-4.545.16-6.75.47m13.5 0c1.01.143 2.01.317 3 .52m-3-.52l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.988 5.988 0 01-2.031.352 5.988 5.988 0 01-2.031-.352c-.483-.174-.711-.703-.59-1.202L18.75 4.971zm-16.5.52c.99-.203 1.99-.377 3-.52m0 0l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.989 5.989 0 01-2.031.352 5.989 5.989 0 01-2.031-.352c-.483-.174-.711-.703-.59-1.202L5.25 4.971z"
+              ></path>
+            </svg>
+          </div>
+          Founded
+        </dt>
+        <dd class="mt-2 text-base leading-7 text-gray-600">
+          Established in {foundedYear}, we've been at the forefront of
+          creativity for {new Date().getFullYear() - foundedYear} years.
+        </dd>
+      </div>
+    </dl>
+  </div>
+
+  <div class="mx-auto mt-32 max-w-2xl lg:text-center">
+    <!-- <h2 class="text-base font-semibold leading-7">
+      <span class="bg-blue-500 text-white px-4 py-1 rounded-full">
+        Leadership
+      </span>
+    </h2> -->
+    <h2
+      class="text-3xl font-bold tracking-tight text-center text-blue-500 sm:text-4xl"
+    >
+      Meet Our Leadership
+    </h2>
+    <p class="mt-6 text-lg leading-8 font-nunito text-gray-600">
+      Our diverse team of experts is dedicated to bringing your vision to life
+      with creativity and precision.
+    </p>
+  </div>
+
+  <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-7xl">
+    <div class="grid grid-cols-1 gap-24 sm:grid-cols-2 lg:grid-cols-5">
+      {
+        leadershipTeam.length > 0 ? (
+          leadershipTeam.map((member) => (
+            <div class="text-center lg:mt-0 mt-24">
+              <img
+                src={member.image}
+                alt={member.name}
+                class="mx-auto h-24 w-24 rounded-full object-cover"
+              />
+              <h3 class="mt-6 text-base font-semibold leading-7 tracking-tight text-gray-900">
+                {member.name}
+              </h3>
+              <p class="text-sm leading-6 text-gray-600">{member.role}</p>
+            </div>
+          ))
+        ) : (
+          <p class="col-span-full text-center text-gray-500">
+            No leadership team members to display.
+          </p>
+        )
+      }
+    </div>
+  </div>
+</div>

@@ -4,9 +4,19 @@
 // Define categories and their corresponding playlist IDs
 const categories = [
   { name: "All", playlistId: "" },
-  { name: "Motion Graphics", playlistId: "PL1BjZnl1Zi3UZZWKY70b5gTPhMwB4UAfh" },
-  { name: "3D Animation", playlistId: "PL1BjZnl1Zi3XhYPZiKNnW3fvN1agpOktS" },
-  { name: "2D Animations", playlistId: "PL1BjZnl1Zi3USLdheoIGAcBYch283c-Xs" },
+  {
+    name: "Corporate  Productions",
+    playlistId: "PL1BjZnl1Zi3Vx9XUN9i1pjwVpiy1Ys2ga",
+  },
+  { name: "Music Videos", playlistId: "PL1BjZnl1Zi3UG2l9M8dNP9zAT-fgeoI0X" },
+  {
+    name: "Creative Content",
+    playlistId: "PL1BjZnl1Zi3VEgC-K7J45QqcBiyZG5lzd",
+  },
+  {
+    name: "Strategic Content",
+    playlistId: "",
+  },
 ];
 
 // YouTube API key (replace with your own)
@@ -150,7 +160,7 @@ if (videos.length === 0) {
         const videoElement = document.createElement("div");
         videoElement.class = "cursor-pointer";
         videoElement.innerHTML = `
-          <img src="${video.thumbnail}" alt="${video.title}" class="w-full rounded-lg transition hover:opacity-75 transition-opacity">
+          <img src="${video.thumbnail}" alt="${video.title}" class="w-full rounded-lg hover:opacity-75 transition transition-opacity">
           <p class="mt-2 text-sm font-medium">${video.title}</p>
         `;
         videoElement.addEventListener("click", () => openVideoModal(video));

@@ -1,125 +1,272 @@
 ---
-import { ViewTransitions } from 'astro:transitions';
-import Footer from '../components/Footer.astro';
+import { ViewTransitions } from "astro:transitions";
+import Footer from "../components/Footer.astro";
 
 interface Props {
   title: string;
 }
 
-const {title} = Astro.props;
+const { title } = Astro.props;
 ---
-<!DOCTYPE html>
-<html class="h-full bg-gray-50" lang="en">
-<head>
-  <meta charset="UTF-8"/>
-  <meta name="description" content="Dashboard template">
-  <meta name="viewport" content="width=device-width"/>
-  <link rel="icon" type="image/svg+xml" href="/logo-64x64.png"/>
-  <meta name="generator" content="Dashboard"/>
-  <title>{title}</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400&family=Roboto:wght@100&display=swap" rel="stylesheet">
-  <ViewTransitions />
-</head>
-<body class="h-full font-nunito">
+<html class="h-full bg-[#FAFCFF]" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Dashboard template" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/logo-64x64.png" />
+    <meta name="generator" content="Dashboard" />
+    <title>{title}</title>
 
-<div class="bg-white">
-  <!-- Header -->
-  <header class="absolute inset-x-0 top-0 z-50">
-    <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
-      <div class="flex lg:flex-1">
-        <a href="/" class="-m-1.5 p-1.5">
-          <span class="sr-only">Your Company</span>
-          <img class="h-20 w-auto invert" src="https://www.flystudios.lk/wp-content/uploads/2023/08/rsz_1white_fly_logo_-_copy-edited.png" alt="">
-        </a>
-      </div>
-      <div id="openNavBar" class="flex lg:hidden">
-        <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
-          <span class="sr-only">Open main menu</span>
-          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-               aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
-          </svg>
-        </button>
-      </div>
-      <div class="hidden lg:flex lg:gap-x-12">
-        <a href="/portfolio" class="text-sm font-semibold leading-6 text-gray-900">Portfolio</a>
-        <a href="/features" class="text-sm font-semibold leading-6 text-gray-900">Features</a>
-        <a href="/company" class="text-sm font-semibold leading-6 text-gray-900">Company</a>
-        <a href="/contact" class="text-sm font-semibold leading-6 text-gray-900">Contact</a>
-      </div>
-      <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-        <a href="/login" class="text-sm font-semibold leading-6 text-gray-900">Log in <span aria-hidden="true">&rarr;</span></a>
-      </div>
-    </nav>
-    <!-- Mobile menu, show/hide based on menu open state. -->
-    <div id="navBar" class="hidden lg:hidden" role="dialog" aria-modal="true">
-      <!-- Background backdrop, show/hide based on slide-over state. -->
-      <div class="fixed inset-0 z-50"></div>
-      <div
-        class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-        <div class="flex items-center justify-between">
-          <a href="/" class="-m-1.5 p-1.5">
-            <span class="sr-only">Your Company</span>
-            <img class="h-8 w-auto" src="/logo-black.png" alt="">
-          </a>
-          <button id="closeNavBar" type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
-            <span class="sr-only">Close menu</span>
-            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                 aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
-            </svg>
-          </button>
-        </div>
-        <div class="mt-6 flow-root">
-          <div class="-my-6 divide-y divide-gray-500/10">
-            <div class="space-y-2 py-6">
-              <a href="/products"
-                 class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Products</a>
-              <a href="/features"
-                 class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Features</a>
-              <a href="/company"
-                 class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Company</a>
-              <a href="/contact"
-                 class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Contact</a>
-            </div>
-            <div class="py-6">
-              <a href="/login"
-                 class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
-                Log in
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400&family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <ViewTransitions />
+  </head>
+  <body class="h-full font-nunito">
+    <div class="bg-[#FAFCFF]">
+      <!-- Header -->
+      <header
+        class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out h-20 md:h-24"
+        id="header"
+      >
+        <nav class="z-10 w-full backdrop-blur-lg px-4 sm:px-6 lg:px-8 h-full">
+          <div
+            class="flex items-center justify-between h-full max-w-7xl mx-auto"
+          >
+            <!-- Logo -->
+            <div class="z-20 flex items-center">
+              <a href="/" aria-label="logo" class="flex items-center">
+                <img
+                  src="https://www.flystudios.lk/wp-content/uploads/2023/08/rsz_1white_fly_logo_-_copy-edited.png"
+                  width={80}
+                  height={128}
+                  alt=""
+                  class="w-[70px] md:w-[90px] invert"
+                />
               </a>
             </div>
+
+            <!-- Navigation menu for desktop -->
+            <div class="hidden lg:flex text-md   pl-16 items-center space-x-8">
+              <a
+                href="/"
+                class="font-medium text-gray-600 hover:text-blue-400 transition"
+                >Home</a
+              >
+              <a
+                href="/portfolio"
+                class=" font-medium text-gray-600 hover:text-blue-400 transition"
+                >Portfolio</a
+              >
+              <a
+                href="/company"
+                class=" font-medium text-gray-600 hover:text-blue-400 transition"
+                >Company</a
+              >
+              <a
+                href="/contact"
+                class="font-medium text-gray-600 hover:text-blue-400 transition"
+                >Contact</a
+              >
+            </div>
+
+            <!-- WhatsApp button for desktop -->
+            <div class="hidden lg:block">
+              <a
+                href="https://wa.link/0k2oeq"
+                class="relative ring-1 rounded-full hover:ring-green-500 flex h-8 items-center justify-center px-4 before:absolute before:inset-0 before:rounded-full before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max text-blue-900 hover:text-green-500"
+                target="_blank"
+              >
+                <span
+                  class="relative text-sm font-semibold transition  "
+                  >Chat on WhatsApp &#10148</span
+                >
+              </a>
+            </div>
+
+            <!-- Mobile menu button -->
+            <div class="lg:hidden">
+              <button
+                id="openNavBar"
+                aria-label="Open Menu"
+                class="p-2 transition duration-200 rounded focus:outline-none focus:shadow-outline"
+              >
+                <svg
+                  class="w-6 h-6"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <line x1="3" y1="12" x2="21" y2="12"></line>
+                  <line x1="3" y1="6" x2="21" y2="6"></line>
+                  <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+              </button>
+            </div>
           </div>
+        </nav>
+
+        <!-- Mobile Navigation Menu -->
+        <div
+          id="navMenu"
+          class="lg:hidden fixed inset-0 bg-white z-50 flex flex-col items-center justify-center space-y-8 invisible opacity-0 transition-all duration-300"
+        >
+          <button
+            id="closeNavBar"
+            aria-label="Close Menu"
+            class="absolute top-4 right-4 p-2 transition duration-200 rounded focus:outline-none focus:shadow-outline"
+          >
+            <svg
+              class="w-6 h-6"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+          <a
+            href="/"
+            class="text-xl font-medium text-gray-600 hover:text-blue-400 transition"
+            >Home</a
+          >
+          <a
+            href="/portfolio"
+            class="text-xl font-medium text-gray-600 hover:text-blue-400 transition"
+            >Portfolio</a
+          >
+          <a
+            href="/company"
+            class="text-xl font-medium text-gray-600 hover:text-blue-400 transition"
+            >Company</a
+          >
+          <a
+            href="/contact"
+            class="text-xl font-medium text-gray-600 hover:text-blue-400 transition"
+            >Contact</a
+          >
+          <a
+            href="https://wa.link/0k2oeq"
+            class="relative ring-1 rounded-full hover:ring-green-500 flex h-8 items-center justify-center px-4 before:absolute before:inset-0 before:rounded-full before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max"
+            target="_blank"
+          >
+            <span
+              class="relative text-sm font-semibold transition hover:text-green-500 text-blue-900"
+              >Chat on WhatsApp &#10148</span
+            >
+          </a>
         </div>
+      </header>
+
+      <main class="isolate pt-14 md:pt-16" id="main-content">
+        <slot />
+      </main>
+
+      <!-- Footer -->
+      <div class="mx-auto mt-32 max-w-7xl px-6 lg:px-8">
+        <Footer />
       </div>
     </div>
-  </header>
-
-  <main class="isolate">
-    <slot />
-  </main>
-
-  <!-- Footer -->
-  <div class="mx-auto mt-32 max-w-7xl px-6 lg:px-8">
-    <Footer/>
-  </div>
-</div>
-
-</body>
+  </body>
 </html>
 
-
 <script>
-  const navBar: HTMLElement = document.getElementById('navBar');
-  const closeNavBar = document.getElementById('closeNavBar');
-  const openNavBar = document.getElementById('openNavBar');
+  function setupNavbar() {
+    const navMenu = document.getElementById("navMenu");
+    const openNavBar = document.getElementById("openNavBar");
+    const closeNavBar = document.getElementById("closeNavBar");
+    const mainContent = document.getElementById("main-content");
 
-  closeNavBar.addEventListener('click', toggleMenu);
-  openNavBar.addEventListener('click', toggleMenu);
+    function toggleMenu() {
+      navMenu.classList.toggle("invisible");
+      navMenu.classList.toggle("opacity-0");
+      document.body.classList.toggle("overflow-hidden");
+      mainContent.classList.toggle("blur-sm");
+    }
 
-  function toggleMenu() {
-    navBar.classList.toggle("hidden");
+    openNavBar.addEventListener("click", toggleMenu);
+    closeNavBar.addEventListener("click", toggleMenu);
+
+    // Close menu when clicking outside
+    navMenu.addEventListener("click", (e) => {
+      if (e.target === navMenu) {
+        toggleMenu();
+      }
+    });
+
+    // Close menu when pressing Escape key
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && !navMenu.classList.contains("invisible")) {
+        toggleMenu();
+      }
+    });
+
+    // Handle resize events
+    function handleResize() {
+      if (window.innerWidth >= 1024) {
+        navMenu.classList.add("invisible", "opacity-0");
+        document.body.classList.remove("overflow-hidden");
+        mainContent.classList.remove("blur-sm");
+      }
+    }
+
+    window.addEventListener("resize", handleResize);
+
+    // Initial setup
+    handleResize();
   }
+
+  function setupScrollBehavior() {
+    const header = document.getElementById("header");
+    let lastScrollTop = 0;
+    let ticking = false;
+
+    function handleScroll() {
+      const scrollTop =
+        window.pageYOffset || document.documentElement.scrollTop;
+
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          if (scrollTop > lastScrollTop && scrollTop > 100) {
+            // Scrolling down
+            header.style.transform = "translateY(-100%)";
+          } else {
+            // Scrolling up
+            header.style.transform = "translateY(0)";
+          }
+          lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+          ticking = false;
+        });
+
+        ticking = true;
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+  }
+
+  // Run setup on initial load
+  setupNavbar();
+  setupScrollBehavior();
+
+  // Re-run setup on view transitions
+  document.addEventListener("astro:after-swap", () => {
+    setupNavbar();
+    setupScrollBehavior();
+  });
 </script>
+
+<style>
+  /* Add any additional styles here */
+</style>

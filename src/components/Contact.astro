@@ -1,175 +1,325 @@
 ---
-interface Props {
-}
+interface Props {}
 
 const {} = Astro.props;
 ---
-<div class="relative isolate">
 
-    <div class="absolute inset-x-0 top-1/2 -z-10 flex -translate-y-1/2 transform-gpu justify-center overflow-hidden blur-3xl sm:bottom-0 sm:right-[calc(50%-6rem)] sm:top-auto sm:translate-y-0 sm:transform-gpu sm:justify-end"
-         aria-hidden="true">
-        <div class="aspect-[1108/632] w-[69.25rem] flex-none bg-gradient-to-r from-[#ff80b5] to-[#9089fc] opacity-25"
-             style="clip-path: polygon(73.6% 48.6%, 91.7% 88.5%, 100% 53.9%, 97.4% 18.1%, 92.5% 15.4%, 75.7% 36.3%, 55.3% 52.8%, 46.5% 50.9%, 45% 37.4%, 50.3% 13.1%, 21.3% 36.2%, 0.1% 0.1%, 5.4% 49.1%, 21.4% 36.4%, 58.9% 100%, 73.6% 48.6%)"></div>
-    </div>
-    
-    <div class="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
-        <div class="relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-48">
-            <div class="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Fly Studios</title>
 
-                <h2 class="text-3xl tracking-tight text-black font-nunito-sans">Get in touch</h2>
-                <p class="mt-6 text-lg leading-8 text-gray-600 font-nunito">
-                    Got an idea in mind? Write to us and let's bring it to life together!
-                </p>
-
-
-                <div class="mx-auto mt-6 max-w-lg space-y-4">
-                    <div class="flex gap-x-6">
-                        <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-black">
-                            <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                 stroke="currentColor" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                      d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <h3 class="text-base font-semibold leading-7 text-black font-nunito-sans">
-                                Sales support
-                            </h3>
-                            <p class="mt-2 leading-7 text-gray-600 font-nunito">
-                                Need assistance with your purchase? Our sales support is just a message away!
-                            </p>
-                            <p class="mt-4">
-                                <a href="#" class="text-sm leading-6 text-gray-800 font-nunito">
-                                    Contact us <span aria-hidden="true">&rarr;</span>
-                                </a>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="flex gap-x-6">
-                        <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-black">
-                            <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                 stroke="currentColor" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                      d="M12 12.75c1.148 0 2.278.08 3.383.237 1.037.146 1.866.966 1.866 2.013 0 3.728-2.35 6.75-5.25 6.75S6.75 18.728 6.75 15c0-1.046.83-1.867 1.866-2.013A24.204 24.204 0 0112 12.75zm0 0c2.883 0 5.647.508 8.207 1.44a23.91 23.91 0 01-1.152 6.06M12 12.75c-2.883 0-5.647.508-8.208 1.44.125 2.104.52 4.136 1.153 6.06M12 12.75a2.25 2.25 0 002.248-2.354M12 12.75a2.25 2.25 0 01-2.248-2.354M12 8.25c.995 0 1.971-.08 2.922-.236.403-.066.74-.358.795-.762a3.778 3.778 0 00-.399-2.25M12 8.25c-.995 0-1.97-.08-2.922-.236-.402-.066-.74-.358-.795-.762a3.734 3.734 0 01.4-2.253M12 8.25a2.25 2.25 0 00-2.248 2.146M12 8.25a2.25 2.25 0 012.248 2.146M8.683 5a6.032 6.032 0 01-1.155-1.002c.07-.63.27-1.222.574-1.747m.581 2.749A3.75 3.75 0 0115.318 5m0 0c.427-.283.815-.62 1.155-.999a4.471 4.471 0 00-.575-1.752M4.921 6a24.048 24.048 0 00-.392 3.314c1.668.546 3.416.914 5.223 1.082M19.08 6c.205 1.08.337 2.187.392 3.314a23.882 23.882 0 01-5.223 1.082"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <h3 class="text-base font-semibold leading-7 text-black font-nunito-sans">
-                                Bug reports
-                            </h3>
-                            <p class="mt-2 leading-7 text-gray-600 font-nunito">
-                                Encountered a glitch? Help us improve by reporting any software issues!
-                            </p>
-                            <p class="mt-4">
-                                <a href="#" class="text-sm leading-6 text-gray-800 font-nunito">
-                                    Report a bug <span aria-hidden="true">&rarr;</span>
-                                </a>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="flex gap-x-6">
-                        <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-black">
-                            <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                 stroke="currentColor" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                      d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <h3 class="text-base font-semibold leading-7 text-black font-nunito-sans">
-                                Technical support
-                            </h3>
-                            <p class="mt-2 leading-7 text-gray-600 font-nunito">
-                                Facing technical hurdles? Reach out for expert support and guidance!
-                            </p>
-                            <p class="mt-4">
-                                <a href="#" class="text-sm leading-6 text-gray-800 font-nunito">
-                                    Ask for help <span aria-hidden="true">&rarr;</span>
-                                </a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
+    <!-- Calendly widget styles and script -->
+    <link
+      href="https://assets.calendly.com/assets/external/widget.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://assets.calendly.com/assets/external/widget.js"
+      type="text/javascript"
+      async></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+  </head>
+  <body>
+    <div class="relative isolate">
+      <div
+        class="absolute inset-x-0 top-1/2 -z-10 flex -translate-y-1/2 transform-gpu justify-center overflow-hidden blur-3xl sm:bottom-0 sm:right-[calc(50%-6rem)] sm:top-auto sm:translate-y-0 sm:transform-gpu sm:justify-end"
+        aria-hidden="true"
+      >
+        <div
+          class="aspect-[1108/632] w-[69.25rem] flex-none bg-gradient-to-r from-[#ff80b5] to-[#9089fc] opacity-25"
+          style="clip-path: polygon(73.6% 48.6%, 91.7% 88.5%, 100% 53.9%, 97.4% 18.1%, 92.5% 15.4%, 75.7% 36.3%, 55.3% 52.8%, 46.5% 50.9%, 45% 37.4%, 50.3% 13.1%, 21.3% 36.2%, 0.1% 0.1%, 5.4% 49.1%, 21.4% 36.4%, 58.9% 100%, 73.6% 48.6%)"
+        >
         </div>
-        <form action="" method="post" class="px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-48">
-            <input type="hidden" name="csrfmiddlewaretoken"
-                   value="Z0bmepYoKOgOHKPQgiZx3LOBVCVLKhetntCGueWINfWsoskZOsUYYa2sCelk4Wz1">
-            <div class="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
-                <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
-                    <div>
-                        <label for="id_first_name" class="block text-sm font-nunito leading-6 text-black">
-                            First name<span class="text-xs text-red-500">*</span>
-                        </label>
-                        <div class="mt-2.5">
-                            <input type="text" name="first_name" maxlength="50"
-                                   class="block w-full rounded-md border-0 bg-gray-100 px-3.5 py-2 text-gray-800 shadow-sm ring-1 ring-inset ring-white/20 focus:ring-0 focus:ring-inset focus:ring-white sm:text-sm sm:leading-6"
-                                   required id="id_first_name">
-                        </div>
+      </div>
 
-                    </div>
-                    <div>
-                        <label for="id_last_name" class="block text-sm font-nunito leading-6 text-black">
-                            Last name<span class="text-xs text-red-500">*</span>
-                        </label>
-                        <div class="mt-2.5">
-                            <input type="text" name="last_name" maxlength="50"
-                                   class="block w-full rounded-md border-0 bg-gray-100 px-3.5 py-2 text-gray-800 shadow-sm ring-1 ring-inset ring-white/20 focus:ring-0 focus:ring-inset focus:ring-white sm:text-sm sm:leading-6"
-                                   required id="id_last_name">
-                        </div>
-
-                    </div>
-                    <div class="sm:col-span-2">
-                        <label for="id_email" class="block text-sm font-nunito leading-6 text-black">
-                            Email<span class="text-xs text-red-500">*</span>
-                        </label>
-                        <div class="mt-2.5">
-                            <input type="email" name="email" maxlength="254"
-                                   class="block w-full rounded-md border-0 bg-gray-100 px-3.5 py-2 text-gray-800 shadow-sm ring-1 ring-inset ring-white/20 focus:ring-0 focus:ring-inset focus:ring-white sm:text-sm sm:leading-6"
-                                   required id="id_email">
-                        </div>
-
-                    </div>
-                    <div class="sm:col-span-2">
-                        <label for="id_phone" class="block text-sm font-nunito leading-6 text-black">
-                            Phone number
-                        </label>
-                        <div class="mt-2.5">
-                            <input type="text" name="phone"
-                                   class="block w-full rounded-md border-0 bg-gray-100 px-3.5 py-2 text-gray-800 shadow-sm ring-1 ring-inset ring-white/20 focus:ring-0 focus:ring-inset focus:ring-white sm:text-sm sm:leading-6"
-                                   id="id_phone">
-                        </div>
-
-                    </div>
-                    <div class="sm:col-span-2">
-                        <label for="id_message" class="block text-sm font-nunito leading-6 text-black">
-                            Message<span class="text-xs text-red-500">*</span>
-                        </label>
-                        <div class="mt-2.5">
-                                <textarea name="message" cols="40" rows="10"
-                                          class="block w-full rounded-md border-0 bg-gray-100 px-3.5 py-2 text-gray-800 shadow-sm ring-1 ring-inset ring-white/20 focus:ring-0 focus:ring-inset focus:ring-white sm:text-sm sm:leading-6"
-                                          required id="id_message"></textarea>
-                        </div>
-                    </div>
+      <div class="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
+        <div
+          class="relative px-6 pb-20 pt-32 sm:pt-32 lg:static lg:px-8 lg:py-48"
+        >
+          <div class="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
+            <h2
+              class="text-4xl sm:text-start text-center tracking-tight text-blue-500 font-nunito-sans"
+            >
+              Get in touch
+            </h2>
+            <p
+              class="mt-6 text-lg leading-8 text-center sm:text-start text-gray-600 font-nunito"
+            >
+              Got an idea in mind? Write to us and let's bring it to life
+              together!
+            </p>
+            <div class="flex flex-col justify-center gap-4 items-center my-12">
+              <p class="text-xl text-center">
+                Click to Send A <span class="text-green-600">WhatsApp</span> Message
+                Quickly!
+              </p>
+              <a href="https://wa.link/0k2oeq" target="_blank">
+                <div
+                  class="text-center border transition hover:border-green-500 hover:text-green-500 border-blue-700 text-blue-900 text-3xl w-fit px-8 py-2 rounded-full"
+                >
+                  +94 76 564 6182
                 </div>
-
-
-                <div class="mt-8 flex justify-end">
-                    <button type="submit"
-                            class="rounded-md border border-black bg-black px-3.5 py-2.5 text-center text-sm font-nunito text-white shadow-sm hover:bg-white hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black">
-                        Send message
-                    </button>
-                </div>
+              </a>
             </div>
+            <div class="mx-auto mt-6 max-w-lg space-y-4">
+              <div class="flex gap-x-6">
+                <div
+                  class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-blue-900"
+                >
+                  <svg
+                    class="h-6 w-6 text-white"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155"
+                    ></path>
+                  </svg>
+                </div>
+                <div>
+                  <h3
+                    class="text-base font-semibold leading-7 text-black font-nunito-sans"
+                  >
+                    Email Us
+                  </h3>
+                  <p class="mt-2 leading-7 text-gray-600 font-nunito">
+                    hello@flystudios.lk
+                  </p>
+                  <p class="mt-4">
+                    <a
+                      href="mailto:hello@flystudios.lk"
+                      class="text-sm leading-6 ring-1 px-4 transition py-2 rounded-full hover:ring-blue-500 ring-blue-900 text-blue-900 font-nunito"
+                    >
+                      Send a Mail <span aria-hidden="true">&rarr;</span>
+                    </a>
+                  </p>
+                </div>
+              </div>
+              <div class="flex gap-x-6">
+                <div
+                  class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-blue-900"
+                >
+                  <svg
+                    fill="white"
+                    class="h-6 w-6 text-white"
+                    version="1.1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 297 297"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    enable-background="new 0 0 297 297"
+                  >
+                    <g>
+                      <path
+                        d="M148.5,116.187c32.029,0,58.086-26.057,58.086-58.086S180.529,0.014,148.5,0.014S90.414,26.072,90.414,58.101   S116.471,116.187,148.5,116.187z M120.402,51.894c3.429-3.427,8.985-3.427,12.414,0l8.387,8.388L164.184,37.3   c3.429-3.427,8.985-3.427,12.414,0c3.428,3.428,3.428,8.986,0,12.414L147.41,78.902c-1.714,1.713-3.96,2.571-6.207,2.571   c-2.247,0-4.493-0.857-6.207-2.571l-14.594-14.594C116.974,60.88,116.974,55.321,120.402,51.894z"
+                      ></path>
+                      <path
+                        d="M34.165,84.869c18.839,0,34.166-15.327,34.166-34.166S53.004,16.537,34.165,16.537S0,31.864,0,50.703   S15.326,84.869,34.165,84.869z"
+                      ></path>
+                      <path
+                        d="m3.367,133.777v70.955c0,16.297 13.211,29.508 29.508,29.508h38.457v52.407c0,3.992 3.236,7.229 7.229,7.229h34.077c3.992,0 7.229-3.236 7.229-7.229v-75.595c0-13.757-11.152-24.908-24.908-24.908h-29.995v-52.367c0-17.009-13.789-30.798-30.798-30.798-17.01-0.001-30.799,13.788-30.799,30.798z"
+                      ></path>
+                      <path
+                        d="m262.835,84.869c18.839,0 34.165-15.327 34.165-34.166s-15.326-34.166-34.165-34.166-34.166,15.327-34.166,34.166 15.327,34.166 34.166,34.166z"
+                      ></path>
+                      <path
+                        d="m232.036,133.777v52.367h-29.994c-13.757,0-24.909,11.152-24.909,24.908v75.595c0,3.992 3.236,7.229 7.229,7.229h34.077c3.992,0 7.229-3.236 7.229-7.229v-52.407h38.457c16.297,0 29.508-13.211 29.508-29.508v-70.955c0-17.009-13.789-30.798-30.798-30.798-17.01-0.001-30.799,13.788-30.799,30.798z"
+                      ></path>
+                      <path
+                        d="m199.616,151.813c4.848,0 8.777-3.93 8.777-8.777 0-4.848-3.93-8.777-8.777-8.777h-102.232c-4.848,0-8.777,3.93-8.777,8.777 0,4.848 3.93,8.777 8.777,8.777h42.338v136.395c0,4.848 3.93,8.777 8.777,8.777s8.777-3.93 8.777-8.777v-136.395h42.34z"
+                      ></path>
+                    </g>
+                  </svg>
+                </div>
+                <div>
+                  <h3
+                    class="text-base font-semibold leading-7 text-black font-nunito-sans"
+                  >
+                    Schedule a Meeting
+                  </h3>
+                  <p class="mt-2 leading-7 text-gray-600 font-nunito">
+                    Time Made Simple: Book Your Meetings in Seconds!
+                  </p>
+                  <p class="mt-4">
+                    <a
+                      href="#"
+                      class="text-sm leading-6 ring-1 px-6 py-2 rounded-full transition hover:ring-blue-500 ring-blue-900 text-blue-900 font-nunito"
+                      onclick="Calendly.initPopupWidget({url: 'https://calendly.com/flystudioslk/30min'}); return false;"
+                    >
+                      Schedule <span aria-hidden="true">&rarr;</span>
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <form
+          id="contact-form"
+          class="px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-48"
+          onsubmit="event.preventDefault(); sendMail();"
+        >
+          <div class="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
+            <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+              <div>
+                <label
+                  for="first_name"
+                  class="block text-sm font-nunito leading-6 text-black"
+                >
+                  First name<span class="text-xs text-red-500">*</span>
+                </label>
+                <div class="mt-2.5">
+                  <input
+                    type="text"
+                    name="first_name"
+                    id="first_name"
+                    maxlength="50"
+                    class="block w-full rounded-md border-0 bg-gray-100 px-3.5 py-2 text-gray-800 shadow-sm ring-1 ring-inset ring-white/20 focus:ring-0 focus:ring-inset focus:ring-white sm:text-sm sm:leading-6"
+                    required
+                  />
+                </div>
+              </div>
+              <div>
+                <label
+                  for="last_name"
+                  class="block text-sm font-nunito leading-6 text-black"
+                >
+                  Last name<span class="text-xs text-red-500">*</span>
+                </label>
+                <div class="mt-2.5">
+                  <input
+                    type="text"
+                    name="last_name"
+                    id="last_name"
+                    maxlength="50"
+                    class="block w-full rounded-md border-0 bg-gray-100 px-3.5 py-2 text-gray-800 shadow-sm ring-1 ring-inset ring-white/20 focus:ring-0 focus:ring-inset focus:ring-white sm:text-sm sm:leading-6"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="sm:col-span-2">
+                <label
+                  for="email"
+                  class="block text-sm font-nunito leading-6 text-black"
+                >
+                  Email<span class="text-xs text-red-500">*</span>
+                </label>
+                <div class="mt-2.5">
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    maxlength="254"
+                    class="block w-full rounded-md border-0 bg-gray-100 px-3.5 py-2 text-gray-800 shadow-sm ring-1 ring-inset ring-white/20 focus:ring-0 focus:ring-inset focus:ring-white sm:text-sm sm:leading-6"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="sm:col-span-2">
+                <label
+                  for="phone"
+                  class="block text-sm font-nunito leading-6 text-black"
+                >
+                  Phone number
+                </label>
+                <div class="mt-2.5">
+                  <input
+                    type="text"
+                    name="phone"
+                    id="phone"
+                    class="block w-full rounded-md border-0 bg-gray-100 px-3.5 py-2 text-gray-800 shadow-sm ring-1 ring-inset ring-white/20 focus:ring-0 focus:ring-inset focus:ring-white sm:text-sm sm:leading-6"
+                  />
+                </div>
+              </div>
+              <div class="sm:col-span-2">
+                <label
+                  for="message"
+                  class="block text-sm font-nunito leading-6 text-black"
+                >
+                  Message<span class="text-xs text-red-500">*</span>
+                </label>
+                <div class="mt-2.5">
+                  <textarea
+                    name="message"
+                    id="message"
+                    rows="4"
+                    class="block w-full rounded-md border-0 bg-gray-100 px-3.5 py-2 text-gray-800 shadow-sm ring-1 ring-inset ring-white/20 focus:ring-0 focus:ring-inset focus:ring-white sm:text-sm sm:leading-6"
+                    required></textarea>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-8 flex justify-end">
+              <button
+                type="submit"
+                class="rounded-full border  border-blue-900 bg-blue-900 px-3.5 py-2.5 text-center text-sm font-nunito text-white shadow-sm hover:bg-white hover:text-black transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+              >
+                Send message
+              </button>
+            </div>
+          </div>
+          <p
+            id="success-message"
+            class="text-center text-blue-500"
+            style="display: none;"
+          >
+            Submission Successfull.
+          </p>
         </form>
+      </div>
+
+      <div
+        class="absolute left-1/2 right-0 top-full -z-10 hidden -translate-y-1/2 transform-gpu overflow-hidden blur-3xl sm:block"
+        aria-hidden="true"
+      >
+        <div
+          class="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30"
+          style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
+        >
+        </div>
+      </div>
     </div>
 
-    <div class="absolute left-1/2 right-0 top-full -z-10 hidden -translate-y-1/2 transform-gpu overflow-hidden blur-3xl sm:block"
-         aria-hidden="true">
-        <div class="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30"
-             style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
-    </div>
+    <script>
+      const publicKey = import.meta.env.PUBLIC_API_KEY;
 
-</div>
+      (function () {
+        // https://dashboard.emailjs.com/admin/account
+        emailjs.init(publicKey);
+      })();
+
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          const serviceID = "service_5jnhylg";
+          const templateID = "template_hgo6myr";
+
+          emailjs.sendForm(serviceID, templateID, this).then(
+            () => {
+              console.log("SUCCESS!");
+              // alert("Message sent successfully!");
+              document.getElementById("success-message").style.display =
+                "block"; // Show success message
+              this.reset();
+            },
+            (error) => {
+              console.log("FAILED...", error);
+              alert("Failed to send the message. Please try again.");
+              document.getElementById("success-message").style.display = "none"; // Hide message on error
+            }
+          );
+        });
+    </script>
+  </body>
+</html>
