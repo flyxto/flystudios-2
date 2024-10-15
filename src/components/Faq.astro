@@ -8,7 +8,7 @@ interface Props {
 const { href, title, body } = Astro.props;
 ---
 
-<div class="">
+<div class="faq-component">
   <div class="mx-auto max-w-7xl divide-y divide-gray-900/10 px-6 py-32 lg:px-8">
     <h2 class="text-2xl font-bold leading-10 tracking-tight text-blue-500 text-center mb-8">
       Frequently Asked Questions
@@ -131,7 +131,7 @@ const { href, title, body } = Astro.props;
 
 <script>
   function setupFAQ() {
-    const faqItems = document.querySelectorAll('dl > div');
+    const faqItems = document.querySelectorAll('.faq-component dl > div');
     faqItems.forEach((item) => {
       const button = item.querySelector('button');
       const content = item.querySelector('dd');
@@ -150,7 +150,11 @@ const { href, title, body } = Astro.props;
     });
   }
 
-  document.addEventListener('DOMContentLoaded', setupFAQ);
+  // Run setupFAQ on initial load
+  setupFAQ();
+
+  // Re-run setupFAQ when the page content updates
+  document.addEventListener('astro:after-swap', setupFAQ);
 </script>
 
 <style>

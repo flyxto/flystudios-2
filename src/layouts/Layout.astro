@@ -1,5 +1,4 @@
 ---
-
 import { ViewTransitions } from "astro:transitions";
 import Footer from "../components/Footer.astro";
 
@@ -31,7 +30,7 @@ const { title } = Astro.props;
     <div class="bg-[#FAFCFF]">
       <!-- Header -->
       <header
-        class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out h-20 md:h-24"
+        class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out h-20 md:h-24 bg-[#FAFCFF]/80"
         id="header"
       >
         <nav class="z-10 w-full backdrop-blur-lg px-4 sm:px-6 lg:px-8 h-full">
@@ -52,7 +51,7 @@ const { title } = Astro.props;
             </div>
 
             <!-- Navigation menu for desktop -->
-            <div class="hidden lg:flex text-md   pl-16 items-center space-x-8">
+            <div class="hidden lg:flex text-md pl-16 items-center space-x-8">
               <a
                 href="/"
                 class="font-medium text-gray-600 hover:text-blue-400 transition"
@@ -60,12 +59,12 @@ const { title } = Astro.props;
               >
               <a
                 href="/portfolio"
-                class=" font-medium text-gray-600 hover:text-blue-400 transition"
+                class="font-medium text-gray-600 hover:text-blue-400 transition"
                 >Portfolio</a
               >
               <a
                 href="/company"
-                class=" font-medium text-gray-600 hover:text-blue-400 transition"
+                class="font-medium text-gray-600 hover:text-blue-400 transition"
                 >Company</a
               >
               <a
@@ -79,11 +78,10 @@ const { title } = Astro.props;
             <div class="hidden lg:block">
               <a
                 href="https://wa.link/0k2oeq"
-                class="relative ring-1 rounded-full hover:ring-green-500 flex h-8 items-center justify-center px-4 before:absolute before:inset-0 before:rounded-full before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max text-blue-900 hover:text-green-500"
+                class="relative ring-1 rounded-full bg-white/80 hover:ring-green-500 flex h-8 items-center justify-center px-4 before:absolute before:inset-0 before:rounded-full before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max text-blue-900 hover:text-green-500"
                 target="_blank"
               >
-                <span
-                  class="relative text-sm font-semibold transition  "
+                <span class="relative text-sm font-semibold transition"
                   >Chat on WhatsApp &#10148</span
                 >
               </a>
@@ -177,6 +175,7 @@ const { title } = Astro.props;
       <!-- Footer -->
       <div class="mx-auto mt-32 max-w-7xl px-6 lg:px-8">
         <Footer />
+
       </div>
     </div>
   </body>
