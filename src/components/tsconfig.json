@@ -1,0 +1,8 @@
+{
+  "extends": "astro/tsconfigs/strict",
+  "compilerOptions": {
+    "strictNullChecks": false, // Disable strict null checks
+    "noImplicitAny": false,    // Allow variables to have an implicit 'any' type
+    "strict": false             // Disable all strict type-checking options (optional)
+  }
+}
