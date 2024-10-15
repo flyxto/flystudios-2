@@ -30,7 +30,7 @@ const { title } = Astro.props;
     <div class="bg-[#FAFCFF]">
       <!-- Header -->
       <header
-        class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out h-20 md:h-24 bg-[#FAFCFF]/80"
+        class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 ease-in-out h-20 md:h-24 bg-[#FAFCFF]/80"
         id="header"
       >
         <nav class="z-10 w-full backdrop-blur-lg px-4 sm:px-6 lg:px-8 h-full">
@@ -82,7 +82,7 @@ const { title } = Astro.props;
                 target="_blank"
               >
                 <span class="relative text-sm font-semibold transition"
-                  >Chat on WhatsApp &#10148</span
+                  >Chat on WhatsApp &#10148;</span
                 >
               </a>
             </div>
@@ -92,7 +92,7 @@ const { title } = Astro.props;
               <button
                 id="openNavBar"
                 aria-label="Open Menu"
-                class="p-2 transition duration-200 rounded focus:outline-none focus:shadow-outline"
+                class="p-2 transition duration-200 z-50 rounded focus:outline-none focus:shadow-outline"
               >
                 <svg
                   class="w-6 h-6"
@@ -113,69 +113,72 @@ const { title } = Astro.props;
         </nav>
 
         <!-- Mobile Navigation Menu -->
+         
         <div
           id="navMenu"
-          class="lg:hidden fixed inset-0 bg-white z-50 flex flex-col items-center justify-center space-y-8 invisible opacity-0 transition-all duration-300"
+          class="lg:hidden fixed inset-0 bg-white z-40 flex flex-col items-center justify-center space-y-8 invisible opacity-0 transition-all duration-300"
         >
-          <button
-            id="closeNavBar"
-            aria-label="Close Menu"
-            class="absolute top-4 right-4 p-2 transition duration-200 rounded focus:outline-none focus:shadow-outline"
-          >
-            <svg
-              class="w-6 h-6"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+        
+        <button
+        id="closeNavBar"
+        aria-label="Open Menu"
+        class="p-2 transition duration-200 z-50 absolute top-5 right-5 rounded focus:outline-none focus:shadow-outline"
+      >
+        <svg
+          class="w-6 h-6"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+          <div class="flex flex-col items-center bg-white py-24 px-24 rounded-2xl space-y-6 absolute top-12">
+            <a
+              href="/"
+              class="text-xl font-medium text-gray-600 hover:text-blue-400 transition"
+              >Home</a
             >
-              <line x1="18" y1="6" x2="6" y2="18"></line>
-              <line x1="6" y1="6" x2="18" y2="18"></line>
-            </svg>
-          </button>
-          <a
-            href="/"
-            class="text-xl font-medium text-gray-600 hover:text-blue-400 transition"
-            >Home</a
-          >
-          <a
-            href="/portfolio"
-            class="text-xl font-medium text-gray-600 hover:text-blue-400 transition"
-            >Portfolio</a
-          >
-          <a
-            href="/company"
-            class="text-xl font-medium text-gray-600 hover:text-blue-400 transition"
-            >Company</a
-          >
-          <a
-            href="/contact"
-            class="text-xl font-medium text-gray-600 hover:text-blue-400 transition"
-            >Contact</a
-          >
-          <a
-            href="https://wa.link/0k2oeq"
-            class="relative ring-1 rounded-full hover:ring-green-500 flex h-8 items-center justify-center px-4 before:absolute before:inset-0 before:rounded-full before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max"
-            target="_blank"
-          >
-            <span
-              class="relative text-sm font-semibold transition hover:text-green-500 text-blue-900"
-              >Chat on WhatsApp &#10148</span
+            <a
+              href="/portfolio"
+              class="text-xl font-medium text-gray-600 hover:text-blue-400 transition"
+              >Portfolio</a
             >
-          </a>
+            <a
+              href="/company"
+              class="text-xl font-medium text-gray-600 hover:text-blue-400 transition"
+              >Company</a
+            >
+            <a
+              href="/contact"
+              class="text-xl font-medium text-gray-600 hover:text-blue-400 transition"
+              >Contact</a
+            >
+            <a
+              href="https://wa.link/0k2oeq"
+              class="relative ring-1 rounded-full hover:ring-green-500 flex h-10 items-center justify-center px-6 before:absolute before:inset-0 before:rounded-full before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95"
+              target="_blank"
+            >
+              <span
+                class="relative text-base font-semibold transition hover:text-green-500 text-blue-900"
+                >Chat on WhatsApp &#10148;</span
+              >
+            </a>
+          </div>
         </div>
       </header>
 
-      <main class="isolate pt-14 md:pt-16" id="main-content">
+      <main class="isolate pt-20 md:pt-24" id="main-content">
         <slot />
       </main>
 
       <!-- Footer -->
       <div class="mx-auto mt-32 max-w-7xl px-6 lg:px-8">
         <Footer />
-
       </div>
     </div>
   </body>
@@ -183,6 +186,7 @@ const { title } = Astro.props;
 
 <script>
   function setupNavbar() {
+    const header = document.getElementById("header");
     const navMenu = document.getElementById("navMenu");
     const openNavBar = document.getElementById("openNavBar");
     const closeNavBar = document.getElementById("closeNavBar");
@@ -192,7 +196,12 @@ const { title } = Astro.props;
       navMenu.classList.toggle("invisible");
       navMenu.classList.toggle("opacity-0");
       document.body.classList.toggle("overflow-hidden");
-      mainContent.classList.toggle("blur-sm");
+      mainContent.classList.toggle("blur-lg bg-white");
+
+      // Reset the header position when opening the menu
+      if (!navMenu.classList.contains("invisible")) {
+        header.style.transform = "translateY(0)";
+      }
     }
 
     openNavBar.addEventListener("click", toggleMenu);
@@ -229,6 +238,7 @@ const { title } = Astro.props;
 
   function setupScrollBehavior() {
     const header = document.getElementById("header");
+    const navMenu = document.getElementById("navMenu");
     let lastScrollTop = 0;
     let ticking = false;
 
@@ -251,14 +261,21 @@ const { title } = Astro.props;
 
         ticking = true;
       }
+
+      // Ensure the mobile menu stays in view when open
+      if (!navMenu.classList.contains("invisible")) {
+        header.style.transform = "translateY(0)";
+      }
     }
 
     window.addEventListener("scroll", handleScroll, { passive: true });
   }
 
   // Run setup on initial load
-  setupNavbar();
-  setupScrollBehavior();
+  document.addEventListener("DOMContentLoaded", () => {
+    setupNavbar();
+    setupScrollBehavior();
+  });
 
   // Re-run setup on view transitions
   document.addEventListener("astro:after-swap", () => {
@@ -268,5 +285,8 @@ const { title } = Astro.props;
 </script>
 
 <style>
-  /* Add any additional styles here */
+  /* Ensure the mobile menu is always visible when open */
+  #navMenu:not(.invisible) {
+    top: 0 !important;
+  }
 </style>
