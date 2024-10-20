@@ -12,9 +12,13 @@ const { title } = Astro.props;
 <html class="h-full bg-[#FAFCFF]" lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Dashboard template" />
+    <meta
+      name="description"
+      content="
+FLY Studios LK is a premier creative production house in Sri Lanka, specializing in stunning VFX, animations, strategic video productions, and expert editing. We bring ideas to life with captivating visuals, delivering innovative and impactful content that resonates with audiences."
+    />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/logo-64x64.png" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <meta name="generator" content="Dashboard" />
     <title>{title}</title>
 
@@ -113,31 +117,32 @@ const { title } = Astro.props;
         </nav>
 
         <!-- Mobile Navigation Menu -->
-         
+
         <div
           id="navMenu"
           class="lg:hidden fixed inset-0 bg-white z-40 flex flex-col items-center justify-center space-y-8 invisible opacity-0 transition-all duration-300"
         >
-        
-        <button
-        id="closeNavBar"
-        aria-label="Open Menu"
-        class="p-2 transition duration-200 z-50 absolute top-5 right-5 rounded focus:outline-none focus:shadow-outline"
-      >
-        <svg
-          class="w-6 h-6"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <line x1="18" y1="6" x2="6" y2="18"></line>
-          <line x1="6" y1="6" x2="18" y2="18"></line>
-        </svg>
-      </button>
-          <div class="flex flex-col items-center bg-blue-900 py-24 px-24 rounded-2xl space-y-6 absolute top-12">
+          <button
+            id="closeNavBar"
+            aria-label="Open Menu"
+            class="p-2 transition duration-200 z-50 absolute top-5 right-5 rounded focus:outline-none focus:shadow-outline"
+          >
+            <svg
+              class="w-6 h-6"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+          <div
+            class="flex flex-col items-center bg-blue-900 py-24 px-24 rounded-2xl space-y-6 absolute top-12"
+          >
             <a
               href="/"
               class="text-xl font-medium text-gray-200 hover:text-blue-400 transition"
@@ -172,7 +177,7 @@ const { title } = Astro.props;
         </div>
       </header>
 
-      <main class="isolate  md:pt-24" id="main-content">
+      <main class="isolate md:pt-24" id="main-content">
         <slot />
       </main>
 
