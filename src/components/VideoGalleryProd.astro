@@ -120,7 +120,7 @@ if (videos.length === 0) {
   </div>
 
   <div
-    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
+    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 cursor-pointer"
     id="video-grid"
   >
     <!-- Video thumbnails will be dynamically inserted here -->
@@ -138,7 +138,7 @@ if (videos.length === 0) {
       <div class="aspect-video w-full mb-4">
         <div id="youtube-player" class="w-full h-full"></div>
       </div>
-      <div id="video-description" class="text-sm max-h-40 overflow-y-auto">
+      <div id="video-description" class="text-sm max-h-40 overflow-y-auto hidden">
       </div>
     </div>
   </div>
