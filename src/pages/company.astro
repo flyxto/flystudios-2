@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import AboutUs from "../components/AboutUs.astro";
 import PartnershipsGridGallery from "../components/PartnershipsGridGallery.astro";
+import ImageGallerySlider from "../components/ImageGallerySlider.astro";
 
 const leadershipTeam = [
   {
@@ -45,8 +46,9 @@ const leadershipTeam = [
       ceoImage="/company/Janindumes.jpg"
     />
     <div class="mx-auto mt-32 max-w-7xl px-6 sm:mt-12 lg:px-8">
-      <!-- ... other sections ... -->
-
+      <ImageGallerySlider />
+    </div>
+    <div class="mx-auto mt-32 max-w-7xl px-6 sm:mt-24 lg:px-8">
       <PartnershipsGridGallery />
     </div>
   </main>
